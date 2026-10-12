@@ -1,0 +1,6 @@
+{
+  "present_mask": 15,
+  "absent_mask": 0,
+  "ambiguous_mask": 0,
+  "reason": "all four capabilities affirmatively described"
+}

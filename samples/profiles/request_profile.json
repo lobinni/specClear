@@ -1,0 +1,7 @@
+{
+  "required_mask": 3,
+  "forbidden_mask": 0,
+  "preferred_mask": 8,
+  "ambiguous_mask": 0,
+  "reason": "explicit requirements at bits 0-1, preference at bit 3"
+}

@@ -1,0 +1,6 @@
+{
+  "present_mask": 3,
+  "absent_mask": 12,
+  "ambiguous_mask": 0,
+  "reason": "enclaves and fabric present; residency and carbon explicitly denied"
+}

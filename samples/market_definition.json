@@ -1,0 +1,54 @@
+{
+  "market": {
+    "name": "Accelerated compute capacity",
+    "semantics": "Batch market for reserved GPU compute capacity with qualitative platform requirements."
+  },
+  "attributes": [
+    {
+      "bit": 0,
+      "label": "CONFIDENTIAL_COMPUTE",
+      "definition": "Offer affirmatively supports confidential-compute attested GPU enclaves."
+    },
+    {
+      "bit": 1,
+      "label": "NVLINK_FABRIC",
+      "definition": "Offer affirmatively provides NVLink interconnected multi-GPU fabric."
+    },
+    {
+      "bit": 2,
+      "label": "EU_RESIDENCY",
+      "definition": "Offer affirmatively guarantees data residency inside the European Union."
+    },
+    {
+      "bit": 3,
+      "label": "CARBON_NEUTRAL",
+      "definition": "Offer affirmatively evidences certified carbon-neutral power usage."
+    }
+  ],
+  "orders": {
+    "request": {
+      "description": "Training run needs attested confidential enclaves on an NVLink fabric; carbon-neutral power preferred.",
+      "quantity": 2,
+      "max_unit_price": 5000,
+      "expected_profile": "profiles/request_profile.json"
+    },
+    "offers": [
+      {
+        "description": "Attested enclave nodes on NVLink fabric, EU hosted, fully carbon-neutral certified.",
+        "quantity": 1,
+        "ask_unit_price": 4000,
+        "expected_profile": "profiles/offer_full.json"
+      },
+      {
+        "description": "Attested enclave nodes on NVLink fabric, fossil powered, non-EU.",
+        "quantity": 2,
+        "ask_unit_price": 3500,
+        "expected_profile": "profiles/offer_basic.json"
+      }
+    ]
+  },
+  "expected_clearing": [
+    { "request": "request", "offer": 0, "quantity": 1, "unit_price": 4000, "preference_score": 1 },
+    { "request": "request", "offer": 1, "quantity": 1, "unit_price": 3500, "preference_score": 0 }
+  ]
+}

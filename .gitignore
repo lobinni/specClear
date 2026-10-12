@@ -1,0 +1,9 @@
+# --- Python ------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# --- Node (smoke-sample tooling only; nothing node-built ships here) ---------
+node_modules/
